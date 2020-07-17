@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.y.DarkSoul.yzz.mapper.UserEquipMapper">
+    <select id="queryAllByUserId" parameterType="int" resultType="com.y.DarkSoul.yzz.entity.Equip">
+        select equip.id,equip.equip_name,equip.equip_des,equip.kind from equip,user_equip where user_id = #{userId} and equip_id = equip.id
+    </select>
+</mapper>
